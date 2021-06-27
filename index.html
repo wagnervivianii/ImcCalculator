@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculando o Imc</title>
+</head>
+
+<body>
+    <section class="containner" id="contt">
+        <div class="txtPrp">
+            <h1 class="titulo" id="tit">Tabela IMC</h1>
+        </div>
+        <div class="flexcont" >
+            <div class="contcabe" >
+                <div class="subTituloImc" >
+                    <h3 class="imc" id="imm" >IMC</h3>
+                    <div class="ListOfQuestion">
+                        <ul>
+                            <li>Menos do que 18,5</li>
+                            <li>Entre 18,5 e 24,9</li>
+                            <li>Entre 25 e 29,9</li>
+                            <li>Entre 30 e 34,9</li>
+                            <li>Entre 35 e 39,9</li>
+                            <li>Mais do que 40</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="subTituloResultado" >
+                <h3>Resultado</h3>
+                <div class="ListOfResp">
+                    <ul>
+                        <li>Abaixo do peso</li>
+                        <li>Peso normal</li>
+                        <li>Sobrepeso</li>
+                        <li>Obesidade grau 1</li>
+                        <li>Obesidade grau 2</li>
+                        <li>Obesidade grau 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>  
+        </div>
+
+        <div class="subtitulo">
+            <p>Calcule seu IMC</p>
+        </div>
+
+        <form class="formulario">
+
+            <label for="entradaNome">Nome:</label>
+            <input type="text" id="entradaNome" class="nomeEntrada" placeholder="Primeiro nome apenas" maxlength="15">
+
+            <label for="entradaPeso">Peso :</label>
+            <input type="text" id="entradaPeso" class="pesoEntrada" placeholder="60.00" maxlength="4">
+
+            <label for="entradaAltura">Altura :</label>
+            <input type="text" id="entradaAltura" class="alturaEntrada" placeholder="1.80" maxlength="4">
+
+            <button class="botao">Enviar</button>
+        </form>
+
+        <div class="resultado" ></div>
+
+    </section>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
