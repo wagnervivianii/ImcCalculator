@@ -24,15 +24,15 @@ function calculator(){
        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está abaixo do Peso!`
        exitresult.setAttribute('style', 'background-color:red;  color: white;')
     }else if(result > 18.5 && result < 24.9){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com o Peso normal! ${exitresult.style.background = 'green'} ${exitresult.style.color = 'white'}`       
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you are at normal weight! ${exitresult.style.background = 'green'} ${exitresult.style.color = 'white'}`       
     }else if(result >= 25 && result <= 29.9){
-        exitresult.innerHTML = `${name}, seu IMcC é: ${result}, você está com o sobrePeso ! ${exitresult.style.background = 'violet'} ${exitresult.style.color = 'white'} `       
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you are overweight! ${exitresult.style.background = 'violet'} ${exitresult.style.color = 'white'} `       
     }else if(result >= 30 && result <= 34.9){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com o OBESIDADE grau 1! ${exitresult.style.background = 'pink'} ${exitresult.style.color = 'gray'} `       
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you have grade 1 OBESITY!${exitresult.style.background = 'pink'} ${exitresult.style.color = 'gray'} `       
     }else if(result >= 35 && result <= 39.9 ){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com OBESIDADE grau 2! ${exitresult.style.background = 'orange'} ${exitresult.style.color = 'pink'} `       
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you have grade 2 OBESITY!${exitresult.style.background = 'orange'} ${exitresult.style.color = 'pink'} `       
     }else if(result >= 40){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com OBESIDADE grau 3! ${exitresult.style.background = 'yellow'} ${exitresult.style.color = 'siler'} `       
+        exitresult.innerHTML = `${name}, seu IMC é: ${result},you have grade 3 OBESITY! ${exitresult.style.background = 'yellow'} ${exitresult.style.color = 'siler'} `       
     }
 }
 
@@ -52,10 +52,10 @@ function validation(){
 
     if ( name != name.match(regexName)){
         alert("Enter only Alpha characters, no spaces! ")
-    }else if (weight != weight.match(regexWeight)) {
-        alert("Enter only characters numeric, as show in the example! ")
-    }else if (height != height.match(regexHeight)) {
-        alert('Enter only characters numeric, as show in teh example! ')        
+    }else if (weight != weight.match(regexWeight) && weight < 40 || weight > 250) {
+        alert("Enter only characters numeric, as show in the example! the weight must be between 40 and 250 kilos")
+    }else if (height != height.match(regexHeight) && height <1.10 || height > 3 ) {
+        alert('Enter only characters numeric, as show in teh example!the height must be between 1.10 and 2.90 meters')        
     }else{
         calculator()
     }
