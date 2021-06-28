@@ -20,8 +20,19 @@ function calculator(){
 
     result =  (weight / Math.pow(height, 2)).toFixed(2);
 
-    if (result < 18,5) {
-       return exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está abaixo do Peso!`
+    if (result < 18.5) {
+       exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está abaixo do Peso!`
+       exitresult.setAttribute('style', 'background-color:red;  color: white;')
+    }else if(result > 18.5 && result < 24.9){
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com o Peso normal! ${exitresult.style.background = 'green'} ${exitresult.style.color = 'white'}`       
+    }else if(result >= 25 && result <= 29.9){
+        exitresult.innerHTML = `${name}, seu IMcC é: ${result}, você está com o sobrePeso ! ${exitresult.style.background = 'violet'} ${exitresult.style.color = 'white'} `       
+    }else if(result >= 30 && result <= 34.9){
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com o OBESIDADE grau 1! ${exitresult.style.background = 'pink'} ${exitresult.style.color = 'gray'} `       
+    }else if(result >= 35 && result <= 39.9 ){
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com OBESIDADE grau 2! ${exitresult.style.background = 'orange'} ${exitresult.style.color = 'pink'} `       
+    }else if(result >= 40){
+        exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está com OBESIDADE grau 3! ${exitresult.style.background = 'yellow'} ${exitresult.style.color = 'siler'} `       
     }
 }
 
@@ -32,7 +43,7 @@ function validation(){
     const heightEntry = document.querySelector('.alturaEntrada');
 
     const regexName  = /[A-Z]+/ig;
-    const regexWeight = /\d\d?\.?(\d{2})?/g;
+    const regexWeight = /\d\d?\d?\.?(\d?){2}/g;
     const regexHeight = /[1-2]\.?(\d{2})?/g;
 
     let name = nameEntry.value;
