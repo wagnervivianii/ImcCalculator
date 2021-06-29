@@ -21,18 +21,23 @@ function calculator(){
     result =  (weight / Math.pow(height, 2)).toFixed(2);
 
     if (result < 18.5) {
-       exitresult.innerHTML = `${name}, seu IMC é: ${result}, você está abaixo do Peso!`
-       exitresult.setAttribute('style', 'background-color:red;  color: white;')
+       exitresult.innerHTML = `${name}, your IMC is: ${result}, você está abaixo do Peso!`
+       exitresult.setAttribute('style', 'background-color:red;  color: yellow;')
     }else if(result > 18.5 && result < 24.9){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you are at normal weight! ${exitresult.style.background = 'green'} ${exitresult.style.color = 'white'}`       
+        exitresult.innerHTML = `${name}, your IMC is: ${result}, you are at normal weight!`
+        exitresult.setAttribute('style', 'background-color:green;  color: white;')       
     }else if(result >= 25 && result <= 29.9){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you are overweight! ${exitresult.style.background = 'violet'} ${exitresult.style.color = 'white'} `       
+        exitresult.innerHTML = `${name}, your IMC is:  ${result}, you are overweight!`       
+        exitresult.setAttribute('style', 'background-color:yellow;  color: blue;')
     }else if(result >= 30 && result <= 34.9){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you have grade 1 OBESITY!${exitresult.style.background = 'pink'} ${exitresult.style.color = 'gray'} `       
+        exitresult.innerHTML = `${name}, your IMC is: ${result}, you have grade 1 OBESITY!`
+        exitresult.setAttribute('style', 'background-color: black;  color: white;')       
     }else if(result >= 35 && result <= 39.9 ){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result}, you have grade 2 OBESITY!${exitresult.style.background = 'orange'} ${exitresult.style.color = 'pink'} `       
+        exitresult.innerHTML = `${name}, your IMC is: ${result}, you have grade 2 OBESITY!`
+        exitresult.setAttribute('style', 'background-color: pink;  color: grey;')       
     }else if(result >= 40){
-        exitresult.innerHTML = `${name}, seu IMC é: ${result},you have grade 3 OBESITY! ${exitresult.style.background = 'yellow'} ${exitresult.style.color = 'siler'} `       
+        exitresult.innerHTML = `${name}, your IMC is: ${result},you have grade 3 OBESITY!`       
+        exitresult.setAttribute('style', 'background-color:purple;  color: yellow;')
     }
 }
 
